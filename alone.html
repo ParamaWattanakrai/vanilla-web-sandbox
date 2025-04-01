@@ -4,21 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Text at the Bottom of a Div - Using Absolute Positioning</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
   <style>
-    .container {
-      position: relative;
-      height: 200px; /* Set height for the container */
-      border: 1px solid #000;
-    }
-    .bottom-text {
-      position: absolute;
-      bottom: 0;
-    }
+
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="bottom-text">Text at the bottom</div>
-  </div>
+  <script>
+    console.log('ha')
+    // Sample data representing a hierarchical structure
+    var data = {
+        name: "root",
+        children: [
+            { name: "child1" },
+            { name: "child2", children: [
+                { name: "child2_1" },
+                { name: "child2_2" }
+            ] },
+            { name: "child3" }
+        ]
+    };
+
+    // Create a hierarchy from the data
+    var root = d3.hierarchy(data);
+
+    // Output the hierarchy to the console
+    console.log(root);
+  </script>
 </body>
 </html>
