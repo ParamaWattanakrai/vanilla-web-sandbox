@@ -24,7 +24,7 @@ var margin = {top: 80, bottom: 80},
 // append the svg object to the body of the page
 // appends a 'group' element to 'svg'
 // moves the 'group' element to the top left margin   
-var svg = d3.select("body").append("svg")
+var svg = d3.select("#tree-container").append("svg")
     .attr("width", "100%")
     .attr("height", "100%")//height + margin.top + margin.bottom)
     .attr("viewBox","0 0 600 350")
